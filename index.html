@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to FireplaceTV - Pyne App</title>
+    <link rel="stylesheet" href="welcome-styles.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <!-- Animated background -->
+        <div class="animated-background">
+            <div class="floating-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="welcome-content">
+            <!-- Logo section with animations -->
+            <div class="logo-section">
+                <div class="logo-container">
+                    <div class="logo-glow"></div>
+                    <img id="pyneLogo" src="logo.png" alt="Pyne App Logo" class="animated-logo">
+                    <div class="logo-ring"></div>
+                    <div class="logo-pulse"></div>
+                </div>
+                
+                <!-- App name with typewriter effect -->
+                <div class="app-name-container">
+                    <h1 class="app-name" id="appName">Pyne App</h1>
+                    <div class="app-tagline" id="appTagline">FireplaceTV</div>
+                </div>
+            </div>
+
+            <!-- Welcome message -->
+            <div class="welcome-message">
+                <h2 class="welcome-title">Welcome to Your Immersive Experience</h2>
+                <p class="welcome-description">
+                    Transform your TV into a stunning visual experience with our extensive collection of 
+                    30+ beautiful wallpapers including 6 fireplace videos, nature scenes, abstract visuals, 
+                    and ambient sounds. Perfect for relaxation, entertainment, and creating the perfect atmosphere.
+                </p>
+            </div>
+
+            <!-- Feature highlights -->
+            <div class="features-grid">
+                <div class="feature-card" data-delay="0.2s">
+                    <div class="feature-icon">🔥</div>
+                    <h3>30+ Stunning Wallpapers</h3>
+                    <p>Extensive collection including 6 fireplace videos, nature scenes, and abstract visuals</p>
+                </div>
+                <div class="feature-card" data-delay="0.4s">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Ambient Sounds</h3>
+                    <p>Curated playlists to enhance your experience</p>
+                </div>
+                <div class="feature-card" data-delay="0.6s">
+                    <div class="feature-icon">📱</div>
+                    <h3>Smart Controls</h3>
+                    <p>Intuitive interface with random video feature and keyboard shortcuts</p>
+                </div>
+                <div class="feature-card" data-delay="0.8s">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern Design</h3>
+                    <p>Beautiful, responsive interface for all devices</p>
+                </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="action-buttons">
+                <button id="enterApp" class="primary-button">
+                    <span class="button-text">Enter FireplaceTV</span>
+                    <div class="button-glow"></div>
+                </button>
+                <button id="learnMore" class="secondary-button">
+                    <span class="button-text">Learn More</span>
+                </button>
+            </div>
+
+            <!-- Loading indicator (hidden initially) -->
+            <div id="loadingIndicator" class="loading-indicator hidden">
+                <div class="loading-spinner"></div>
+                <p>Loading your experience...</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="welcome-footer">
+            <p>&copy; 2025 Pyne App. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="welcome-script.js"></script>
+</body>
+</html>

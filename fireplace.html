@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireplaceTV - Pyne App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img id="appLogo" src="logo.png" alt="Pyne App Logo">
+            </div>
+            <div class="title-section">
+                <h1 class="app-title">FireplaceTV</h1>
+                <p class="app-subtitle">Immersive TV Wallpapers & Ambient Sounds</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button id="homeButton" class="icon-button" title="Back to Welcome">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                </svg>
+            </button>
+            <button id="settingsButton" class="icon-button" title="Settings">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="video-container">
+        <div id="loadingIndicator" class="loading-indicator">
+            <div class="loading-spinner"></div>
+            <p>Loading wallpaper...</p>
+        </div>
+        <video id="myVideo" autoplay loop muted playsinline>
+            <source src="fire.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="controls-overlay">
+            <div class="control-group">
+                <label for="videoSelector" class="control-label">Wallpaper</label>
+                <select id="videoSelector" class="modern-select">
+                    <optgroup label="🔥 Fireplace Collection">
+                        <option value="fire.mp4">🔥 Classic Fireplace</option>
+                        <option value="fireplace2.mp4">🔥 Cozy Fireplace</option>
+                        <option value="fireplace3.mp4">🔥 Warm Fireplace</option>
+                        <option value="fireplace4.mp4">🔥 Crackling Fire</option>
+                        <option value="fireplace5.mp4">🔥 Hearth Fire</option>
+                        <option value="fireplace6.mp4">🔥 Log Fire</option>
+                    </optgroup>
+                    <optgroup label="🌊 Nature & Water">
+                        <option value="ocean.mp4">🌊 Ocean Waves</option>
+                        <option value="beach.mp4">🏖️ Beach Sunset</option>
+                        <option value="rainforest.mp4">🌿 Rainforest</option>
+                        <option value="waterfall.mp4">💧 Waterfall</option>
+                        <option value="river.mp4">🏞️ Flowing River</option>
+                        <option value="lake.mp4">🏔️ Mountain Lake</option>
+                    </optgroup>
+                    <optgroup label="🌅 Sky & Weather">
+                        <option value="incoming.mp4">🌅 Golden Hour</option>
+                        <option value="clouds.mp4">☁️ Flowing Clouds</option>
+                        <option value="storm.mp4">⛈️ Gentle Storm</option>
+                        <option value="aurora.mp4">🌌 Northern Lights</option>
+                        <option value="stars.mp4">⭐ Starry Night</option>
+                        <option value="sunset.mp4">🌇 Sunset</option>
+                    </optgroup>
+                    <optgroup label="🎨 Abstract & Colors">
+                        <option value="purple.mp4">💜 Purple Dreams</option>
+                        <option value="purple2.mp4">💜 Purple Waves</option>
+                        <option value="purple3.mp4">💜 Purple Flow</option>
+                        <option value="blue.mp4">💙 Blue Serenity</option>
+                        <option value="green.mp4">💚 Green Harmony</option>
+                        <option value="orange.mp4">🧡 Orange Glow</option>
+                    </optgroup>
+                    <optgroup label="🎉 Special & Events">
+                        <option value="award.mp4">🏆 Award Ceremony</option>
+                        <option value="party.mp4">🎉 Celebration</option>
+                        <option value="holiday.mp4">🎄 Holiday Cheer</option>
+                        <option value="birthday.mp4">🎂 Birthday Party</option>
+                        <option value="wedding.mp4">💒 Wedding Bliss</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="control-actions">
+                <button id="fullscreenButton" class="modern-button primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                    </svg>
+                    Fullscreen
+                </button>
+                <button id="randomButton" class="modern-button secondary" title="Random Video">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 3v6h6"></path>
+                        <path d="M23 3v6h-6"></path>
+                        <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+                    </svg>
+                    Random
+                </button>
+                <button id="muteButton" class="modern-button secondary" title="Toggle Mute">
+                    <svg id="muteIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="music-player-overlay">
+            <div class="music-header">
+                <h3>🎵 Ambient Sounds</h3>
+                <button id="toggleMusic" class="toggle-button" title="Toggle Music Player">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="music-content">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator"
+                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
