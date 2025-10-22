@@ -197,13 +197,13 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         
         // Special & Events
-        'award.mp4': { 
-            path: 'https://drive.google.com/file/d/1_D-tjUVaVz25zK7tHAjuLVEGF0vujsGA/view?usp=drive_link', 
-            name: 'Award Ceremony',
-            emoji: '🏆',
-            category: 'celebration',
-            description: 'Elegant award ceremony atmosphere'
-        },
+       'award.mp4': { 
+    path: 'https://drive.google.com/uc?export=download&id=1_D-tjUVaVz25zK7tHAjuLVEGF0vujsGA', 
+    name: 'Award Ceremony',
+    emoji: '🏆',
+    category: 'celebration',
+    description: 'Elegant award ceremony atmosphere'
+},
         'party.mp4': { 
             path: 'party.mp4', 
             name: 'Celebration',
