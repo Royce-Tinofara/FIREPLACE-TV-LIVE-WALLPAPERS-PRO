@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Special & Events
         'award.mp4': { 
-            path: 'award.mp4', 
+            path: 'https://drive.google.com/file/d/1_D-tjUVaVz25zK7tHAjuLVEGF0vujsGA/view?usp=drive_link', 
             name: 'Award Ceremony',
             emoji: '🏆',
             category: 'celebration',
