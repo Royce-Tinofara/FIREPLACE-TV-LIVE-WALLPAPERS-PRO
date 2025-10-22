@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FireplaceTV - Pyne App</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -122,9 +123,87 @@
                 </button>
             </div>
             <div class="music-content">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator"
-                        width="100%" height="352" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <div class="music-tabs">
+                    <button class="music-tab active" data-tab="apple">Apple Music</button>
+                    <button class="music-tab" data-tab="deezer">Deezer</button>
+                    <button class="music-tab" data-tab="spotify">Spotify</button>
+                    <button class="music-tab" data-tab="youtube">YouTube</button>
+                </div>
+                
+                <div id="musicPlayerContainer">
+                    <!-- Apple Music Player -->
+                    <div id="applePlayer" class="music-player active">
+                        <div class="playlist-header">
+                            <h3>Apple Music Top 100 Zimbabwe</h3>
+                        </div>
+                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
+                                frameborder="0" 
+                                height="380" 
+                                style="width:100%;border-radius:12px;"
+                                sandbox="allow-forms allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+                                src="https://embed.music.apple.com/us/playlist/top-100-zimbabwe/pl.ad37160bb16c4c70a1d83d3670e96c1a"
+                                title="Apple Music Top 100 Zimbabwe">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Deezer Player -->
+                    <div id="deezerPlayer" class="music-player">
+                        <div class="playlist-header">
+                            <h3>Deezer Top 100 Worldwide</h3>
+                        </div>
+                        <iframe title="deezer-widget" 
+                                src="https://widget.deezer.com/widget/auto/playlist/3155776842"
+                                width="100%" 
+                                height="300" 
+                                frameborder="0" 
+                                allowtransparency="true" 
+                                allow="encrypted-media; clipboard-write">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Spotify Player -->
+                    <div id="spotifyPlayer" class="music-player">
+                        <div class="playlist-header">
+                            <h3>Spotify Playlist</h3>
+                        </div>
+                        <iframe data-testid="embed-iframe" 
+                                style="border-radius:12px" 
+                                src="https://open.spotify.com/embed/playlist/0TH4KOzNT3sRLElrHWDpqz?utm_source=generator&theme=0"
+                                width="100%" 
+                                height="352" 
+                                frameBorder="0" 
+                                allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy"
+                                title="Spotify Playlist">
+                        </iframe>
+                    </div>
+                    
+                    <!-- YouTube Player -->
+                    <div id="youtubePlayer" class="music-player">
+                        <div class="playlist-header">
+                            <h3>Top 100 Music Videos Zimbabwe</h3>
+                            <p>by YouTube Global Music Charts</p>
+                        </div>
+                        <iframe width="100%" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/videoseries?si=otTkxr9dnaZrC_cK&amp;list=PL4fGSI1pDJn7HuQm191bZDx7ZMMgk9-Bp" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <div id="musicPlayerError" class="music-error" style="display: none;">
+                        <div class="error-content">
+                            <h4>🎵 Music Player Unavailable</h4>
+                            <p>Unable to load the music player. Please check your internet connection or try refreshing the page.</p>
+                            <button id="retryMusicPlayer" class="retry-button">Retry</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -132,4 +211,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
