@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'Beautiful beach sunset with golden light'
         },
         'rainforest.mp4': { 
-            path: 'rainforest.mp4', 
+            path: 'https://github.com/Royce-Tinofara/FPTV/blob/main/rainforest.mp4', 
             name: 'Rainforest',
             emoji: '🌿',
             category: 'nature',
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Abstract & Colors
         'purple.mp4': { 
-            path: 'purple.mp4', 
+            path: 'https://github.com/Royce-Tinofara/FPTV/blob/main/purple.mp4', 
             name: 'Purple Dreams',
             emoji: '💜',
             category: 'abstract',
@@ -205,14 +205,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Special & Events
         'award.mp4': { 
-            path: 'award.mp4', 
+            path: 'https://github.com/Royce-Tinofara/FPTV/blob/main/award.mp4', 
             name: 'Award Ceremony',
             emoji: '🏆',
             category: 'celebration',
             description: 'Elegant award ceremony atmosphere'
         },
         'party.mp4': { 
-            path: 'party.mp4', 
+            path: 'https://github.com/Royce-Tinofara/FPTV/blob/main/party.mp4', 
             name: 'Celebration',
             emoji: '🎉',
             category: 'celebration',
